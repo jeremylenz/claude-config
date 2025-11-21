@@ -29,6 +29,50 @@ This repository contains my portable Claude Code configuration for consistency a
    ```
    You should see the configuration files along with runtime directories that will be created as you use Claude Code.
 
+## If .claude Directory Already Exists
+
+If you already have a `.claude` directory on the new machine, you have several options:
+
+### Option 1: Backup and Replace (Recommended)
+
+This is the cleanest approach and preserves your credentials:
+
+```bash
+cd ~
+mv .claude .claude.backup
+git clone git@github.com:jeremylenz/claude-config.git .claude
+# Copy credentials from backup
+cp .claude.backup/.credentials.json .claude/
+```
+
+### Option 2: Initialize Git in Existing Directory
+
+If you want to preserve local files and merge with the remote:
+
+```bash
+cd ~/.claude
+git init
+git remote add origin git@github.com:jeremylenz/claude-config.git
+git fetch
+git checkout -b main
+git branch --set-upstream-to=origin/main main
+git pull --rebase
+```
+
+Note: This may require resolving conflicts if your local files differ from the repository.
+
+### Option 3: Clone to Temporary Location
+
+If you want to manually review and copy files:
+
+```bash
+cd ~
+git clone git@github.com:jeremylenz/claude-config.git claude-config-temp
+# Manually copy desired files from claude-config-temp/ to .claude/
+# Then delete the temporary directory
+rm -rf claude-config-temp
+```
+
 ## What's NOT Included
 
 The following files/directories are excluded via `.gitignore` as they contain runtime data, session state, or sensitive information:
