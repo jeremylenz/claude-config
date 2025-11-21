@@ -1,0 +1,18 @@
+# Credentials and sensitive data
+.credentials.json
+
+# Runtime and session data
+debug/
+file-history/
+history.jsonl
+session-env/
+shell-snapshots/
+.update.lock
+
+# Session-specific content
+plans/
+projects/
+todos/
+
+# Logs
+*.log
