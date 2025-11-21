@@ -3,3 +3,4 @@
 - Push explicitly to the remote. Don't just 'git push'.
 - Our hot code reloading doesn't work well for Ruby. If you've changed Ruby code and want me to test in the browser, remind me to restart the Foreman server. If only JS code has changed, server restart is not needed.
 - After running tests or lint, you may be in the Foreman directory, and you may need to switch back to the plugin directory in order to see our branch's changes.
+- Don't use CVE as an abbreviation for content view environment(s). CVE always stands for Common Vulnerabilities and Exposures.
