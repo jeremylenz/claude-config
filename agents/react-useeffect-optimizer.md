@@ -15,6 +15,7 @@ When reviewing React components, you will:
    - State updates that can be avoided using the `key` prop for component resets
    - Derived state calculations that create unnecessary Effect chains
    - Any useEffect that runs on every render when a simple calculation would suffice
+   - Any useEffect that disables the react-hooks/exhaustive-deps eslint rule. The react-hooks/exhaustive-deps rule should NEVER be disabled.
 
 2. **Apply Specific Refactoring Patterns**:
 

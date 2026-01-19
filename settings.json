@@ -1,3 +1,38 @@
 {
-  "alwaysThinkingEnabled": true
+  "permissions": {
+    "allow": [
+      "Bash(npm run test:plugins:*)",
+      "Bash(bundle exec rake:*)",
+      "Bash(tee:*)",
+      "Read(//tmp/**)",
+      "Read(//home/vagrant/**)",
+      "Bash(ktest:*)",
+      "Bash(gh pr view:*)",
+      "Bash(npm run lint)",
+      "Bash(npx jest:*)",
+      "Bash(npm run lint:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(bundle exec rubocop:*)",
+      "Bash(find:*)",
+      "Bash(bundle exec rails runner:*)",
+      "WebFetch",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh api:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm run lint:plugins:*)",
+      "Bash(sudo npm install:*)",
+      "Bash(npm install)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "default",
+    "additionalDirectories": [
+      "/home/vagrant/foreman"
+    ]
+  },
+  "enabledPlugins": {
+    "commit-commands@claude-plugins-official": true
+  }
 }
