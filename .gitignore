@@ -16,3 +16,11 @@ todos/
 
 # Logs
 *.log
+
+# Cache directories (added 2026-01-19)
+cache/
+paste-cache/
+stats-cache.json
+
+# Plugin runtime state
+plugins/
