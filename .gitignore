@@ -22,5 +22,8 @@ cache/
 paste-cache/
 stats-cache.json
 
+# Local settings (machine-specific, contains Vertex env)
+settings.local.json
+
 # Plugin runtime state
 plugins/
