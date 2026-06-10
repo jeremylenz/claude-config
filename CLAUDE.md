@@ -12,5 +12,5 @@
 
 This ~/.claude directory is a git repo tracking git@github.com:jeremylenz/claude-config.git (main branch).
 
-- The Vertex `env` block lives in `settings.local.json`, which is gitignored. After cloning on a new machine, create `settings.local.json` with the appropriate `env` values for `CLAUDE_CODE_USE_VERTEX`, `CLOUD_ML_REGION`, and `ANTHROPIC_VERTEX_PROJECT_ID` (plus any machine-specific permissions).
+- Vertex env vars (`CLAUDE_CODE_USE_VERTEX`, `CLOUD_ML_REGION`, `ANTHROPIC_VERTEX_PROJECT_ID`) are set in `~/.bashrc`, not in settings.json. After cloning on a new machine, add these exports to the shell profile.
 - To sync local changes back to the repo: `git add . && git commit -m "description" && git push origin main` from ~/.claude

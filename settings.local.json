@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git branch:*)",
+      "Bash(find:*)",
+      "Bash(bundle exec rake:*)",
+      "Bash(time bundle exec rake:*)",
+      "Bash(cat:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(cp /home/vagrant/.claude/settings.json /home/vagrant/.claude/settings.json.local_backup)",
+      "Bash(cp /home/vagrant/.claude/settings.repo.json /home/vagrant/.claude/settings.json)",
+      "Bash(rm /home/vagrant/.claude/settings.repo.json)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
