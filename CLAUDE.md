@@ -7,3 +7,11 @@
 - Database schema is located in the Foreman directory, in db/structure.sql
 - For code review replies: Be concise and conversational. Lead with a simple definition if introducing a concept. Focus on what happened (the narrative) rather than deep technical 
   details. Keep it to 2-4 sentences. Use simple explanations instead of listing specifics. Don't over-explain.
+
+## Config repo sync
+
+This ~/.claude directory is a git repo tracking git@github.com:jeremylenz/claude-config.git (main branch).
+
+- The Vertex `env` block in settings.json is machine-specific and intentionally not committed. After cloning on a new machine, add it manually with the appropriate values for `CLAUDE_CODE_USE_VERTEX`, `CLOUD_ML_REGION`, and `ANTHROPIC_VERTEX_PROJECT_ID`.
+- To sync local changes back to the repo: `git add . && git commit -m "description" && git push origin main` from ~/.claude
+- settings.json will always show as locally modified (due to the env block). That's expected.
