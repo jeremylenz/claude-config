@@ -72,8 +72,9 @@ Analyze ALL changes (not just latest commit) and create summary.
 # Push with -u if needed
 git push -u jeremylenz <branch>
 
-# Create PR
-gh pr create --title "Title" --body "$(cat <<'EOF'
+# Create PR: base = UPSTREAM default branch, head = personal fork branch
+gh pr create --repo <upstream-owner>/<repo> --base master \
+  --head jeremylenz:<branch> --title "Title" --body "$(cat <<'EOF'
 ## Summary
 <1-3 bullet points>
 
@@ -86,7 +87,13 @@ EOF
 ```
 
 **IMPORTANT**:
-- Create PRs against personal fork, NEVER against upstream or origin
+- The branch lives on the personal fork (`jeremylenz`), but the PR MERGES INTO the
+  upstream repo: base = `<upstream>:master`, head = `jeremylenz:<branch>`. This is the
+  GitHub "wants to merge N commits into Katello:master from jeremylenz:<branch>" setup.
+- "Push to the fork, not origin/upstream" is about WHERE THE BRANCH IS PUSHED — it does
+  NOT mean the PR base is the fork. The PR base is always upstream.
+- Pass `--repo <upstream>` to `gh pr create` so the PR is opened on the upstream repo,
+  not the fork. Add `--draft` when a draft PR is requested.
 - When creating the pull request description, find and follow PULL_REQUEST_TEMPLATE.md if it exists
 - PR description should outline manual testing steps that the PR reviewer can follow
 - Keep the description concise and focused on user impact
