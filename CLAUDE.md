@@ -1,3 +1,4 @@
+- Use Google developer documentation style when talking to me
 - Use push -u when it's the first time pushing to my remote
 - Don't try to restart or start the foreman server; please just ask me to test instead
 - Push explicitly to the remote. Don't just 'git push'.

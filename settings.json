@@ -35,11 +35,11 @@
       "/home/vagrant/foreman"
     ]
   },
-  "model": "claude-opus-4-6[1m]",
   "enabledPlugins": {
     "commit-commands@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true
   },
+  "effortLevel": "high",
   "theme": "light",
   "verbose": true,
   "skipAutoPermissionPrompt": true

@@ -13,6 +13,13 @@ shell-snapshots/
 plans/
 projects/
 todos/
+sessions/
+backups/
+
+# Updater/MCP state
+.last-cleanup
+.last-update-result.json
+mcp-needs-auth-cache.json
 
 # Logs
 *.log
